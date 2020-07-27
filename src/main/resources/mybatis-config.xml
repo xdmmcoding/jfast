@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings> 
+        <setting name="cacheEnabled" value="true" /><!-- 全局映射器启用缓存 -->   
+        <setting name="useGeneratedKeys" value="true" /> 
+        <setting name="defaultExecutorType" value="REUSE" />
+    </settings>
+	<!-- 分页工具 -->
+	<plugins>
+		<plugin interceptor="com.jfast.core.paging.PageInterceptor">
+			<!-- 数据库方言 -->
+			<property name="dialect" value="mysql"/>
+			<!-- 需要拦截的SQLID(正则匹配) -->
+			<property name="pageSqlId" value=".*ByFilter*"/>
+			<!-- 是否开启拦截匹配 -->
+			<property name="pageSqlIdFlag" value="true"/>
+		</plugin>
+	</plugins>
+</configuration>
