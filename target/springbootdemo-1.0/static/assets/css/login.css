@@ -1,0 +1,112 @@
+html,body{
+    height: 100%;
+}
+body{
+    background-color: #f0f2f5;
+}
+
+@font-face {font-family: "AI";
+  src: url('../font/ai.eot?t=1522660080732'); /* IE9*/
+  src: url('../font/ai.eot?t=1522660080732#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAY8AAsAAAAACOwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7klTY21hcAAAAYAAAABxAAABsgVg1KRnbHlmAAAB9AAAAikAAALAJwyXdWhlYWQAAAQgAAAALwAAADYQ72wdaGhlYQAABFAAAAAcAAAAJAfeA4ZobXR4AAAEbAAAABMAAAAUE+kAAGxvY2EAAASAAAAADAAAAAwBgAIWbWF4cAAABIwAAAAeAAAAIAEUAF1uYW1lAAAErAAAAUgAAAIlgV2vXHBvc3QAAAX0AAAARgAAAFxjcyq+eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/s04gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDxPY27438AQw9zA0AAUZgTJAQAr+wzWeJzFkcENgCAQBOdAjTGW4tu31fjy5YvyrAbL0IXzoRW4lyF7myMQAFogikk0YDtG0abUah4Zat6wqB/oCaqU53yc63Upe3uXac6r+Ki9QabjN9l/R3811nV5Or046UFXzLNTfiQfTpk5V4dwAxJQGNAAAAB4nFWQP2/TQBjG773L2YkvsVP/TZzYiWMSg0qNSN0EBCQMLEUMIBY6EOgHgIGlqsSQpRUDA0tGGBASc6cuHYpUqUjN0m8AhYlOHWByXM4ulYr1+rnn3nul+92DKEKn38kOqSANXUbX0T30ECEQ5qElYwe8IArxPBgeNSxdJoEfeKLfCskdsFqCbnZ7UccSREEBGVxY9Lq9IMQBLEUDfAu6pgNQrdmP1XZdJe9AqgTuRnIffwSj4deVwUKyfHWod5tafq2oqlVVfZsXKM1jnFNkeGGZBVqQhOQTVWxjp3EFN6BYDewHK6VmTV19E7102lYBYDwGrdaUPw/n7Dler21TU6tiuZSv2CX/kg5rP1lFKzqdH4h/hL91l+ySMWLIQs30nUg0kdVD/Q4iIQQD6LtgyUAsz/BEqx/At2lyQiko0ykolCYn063jXO54K9MPk+QGfJ0sHB2RcXp0YTTeOB/iih9N7qZTKMfvPyVfOEZ6v48ihDQvzdD30jRppotZh1zw7TTna9AfQAgKCLq1Sm4rhqHEe1zJ8uwg3eAlrqV4P/XkJteZxRxDej5iYLjSepHhbcM1eP0+W5LNs/VQ4sejJ8w1QHrFXJbmlMvC+o8TvBCiHucxdYFmKmYd7YJvC61ONIQghAE0wNRF8j7eK+t6OcONtzNEZXbAW3KGqMT73ONfzDHZs6cc1GHrjIOC3tB5/eE/pD7ZPHeHkllnoxXJMf/R/gVcdIfdAAAAeJxjYGRgYADisxEb+eL5bb4ycLMwgMC1F8IfEPT/AywMzA1ALgcDE0gUAEFcC2cAeJxjYGRgYG7438AQw8IAAkCSkQEVsAIARwsCbnicY2FgYGB+ycDAwoDAAA6bAP0AAAAAAAB2ALYBCgFgeJxjYGRgYGBlCARiEGACYi4gZGD4D+YzAAARLQFyAAB4nF2RPU7DQBCFn0MShCNRgIAOLRQUIOwkZTorUiK3KVLQJc46P7K91mYTKSeh4AQUFJyCgjtwFl6cCQW2dvTNmzczKxvABX7g4fBc8RzYQ43ZgWs4xY3wCbNb4TpZCTfQwr1wk/qzsI8nhMItXOKFE7z6GbNH5MIeJ70K13CON+ET6u/Cdb4fwg1c41O4Sf1L2McY38ItPHh3ft/qidMzNd2pZWKK1BTOj+KRnm+yiY3iKB5ru16aQnWCdhQPdaHt0b/ezrvOpSq1JlcDNuosM6q0ZqUTFyycK3thmIoeJCbn+j4sNCZwjDN+mil2jEskMCiQVtHRFyHGiJ45Nsjot5WyP2OqFmv27L0KHQRoV5UhK0VV/T9/jS0ndak67lA8lt05aSAbNbdkZIWyqq2oJNQDLKquEj3+pPDvhkd/UN08/wU7iFeyeJxjYGKAAC4G7ICVkYmRmZGFkZWRjYGxQiyxqCi/XLcoMz2jRDc5syg5J1W3WDefIzc1rzQtPyeFC8QozQMxGRgAmgAQtAAA') format('woff'),
+  url('../font/ai.ttf?t=1522660080732') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/ai.svg?t=1522660080732#AI') format('svg'); /* iOS 4.1- */
+}
+
+.ai {
+  font-family:"AI" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ai-enter:before { content: "\e766"; }
+
+.login-wrap{
+    display: table;
+    width: 100%;
+}
+
+.login-container{
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.bgImg {
+    background: url('../../assets/images/bg.jpg');
+    background-size: cover;
+}
+.system-title {
+    font-family: DFYuanW9-GB;
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.login-title {
+    margin-bottom:25px;
+    color: #333333;
+    font-size: 20px;
+    text-align: center;
+    height: 49px;
+    border-bottom: 3px solid #dddddd;
+}
+.login-title span{
+    display:block;
+    float: left;
+    width: 50%;
+    padding-bottom: 23px;
+    cursor: pointer;
+    
+}
+.login-title span.active{
+    border-bottom: 3px solid #1395fa;
+    color: #1395fa;
+}
+.login-form{
+    width: 435px;
+    padding: 30px 45px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.87);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.login-form input {
+    width: 345px;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #D2D2D2;
+    color: #999999;
+    font-size: 18px;
+}
+.login-form .layui-form-item {
+    margin-bottom: 25px;
+}
+.login-btn {
+    background-image: linear-gradient(180deg, 
+		#01c6fa 0%, 
+		#1493fa 100%), 
+	linear-gradient(
+		#03c2fa, 
+		#03c2fa);
+}
+.login-btn, .sendCode {
+    height: 52px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.forgetPass a:hover {
+    color:#1395fa!important;
+}
+.resend {
+    background: #d8d8d8;
+    color: #707070;
+    font-size: 14px;
+}
+.resend:hover {
+     color: #707070;
+}

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.cnki.app.mapper.SysMenuMapper">
+  <resultMap id="BaseResultMap" type="net.cnki.app.pojo.SysMenu">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="u_type" jdbcType="VARCHAR" property="uType" />
+    <result column="m_type" jdbcType="VARCHAR" property="mType" />
+    <result column="text" jdbcType="VARCHAR" property="text" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="parent_code" jdbcType="VARCHAR" property="parentCode" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="permissions" jdbcType="VARCHAR" property="permissions" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, u_type, m_type, text, code, parent_code, icon, state, url, permissions, create_time, 
+    update_time, description, remarks, sort
+  </sql>
+  <select id="selectByExample" parameterType="net.cnki.app.pojo.SysMenuExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sys_menu
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_menu
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_menu
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="net.cnki.app.pojo.SysMenu">
+    insert into sys_menu (id, u_type, m_type, 
+      text, code, parent_code, 
+      icon, state, url, permissions, 
+      create_time, update_time, description, 
+      remarks, sort)
+    values (#{id,jdbcType=INTEGER}, #{uType,jdbcType=VARCHAR}, #{mType,jdbcType=VARCHAR}, 
+      #{text,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, #{parentCode,jdbcType=VARCHAR}, 
+      #{icon,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{permissions,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, 
+      #{remarks,jdbcType=VARCHAR}, #{sort,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="net.cnki.app.pojo.SysMenu">
+    insert into sys_menu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="uType != null">
+        u_type,
+      </if>
+      <if test="mType != null">
+        m_type,
+      </if>
+      <if test="text != null">
+        text,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="parentCode != null">
+        parent_code,
+      </if>
+      <if test="icon != null">
+        icon,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+      <if test="permissions != null">
+        permissions,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="remarks != null">
+        remarks,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uType != null">
+        #{uType,jdbcType=VARCHAR},
+      </if>
+      <if test="mType != null">
+        #{mType,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null">
+        #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="permissions != null">
+        #{permissions,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null">
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="net.cnki.app.pojo.SysMenuExample" resultType="java.lang.Long">
+    select count(*) from sys_menu
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="net.cnki.app.pojo.SysMenu">
+    update sys_menu
+    <set>
+      <if test="uType != null">
+        u_type = #{uType,jdbcType=VARCHAR},
+      </if>
+      <if test="mType != null">
+        m_type = #{mType,jdbcType=VARCHAR},
+      </if>
+      <if test="text != null">
+        text = #{text,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="parentCode != null">
+        parent_code = #{parentCode,jdbcType=VARCHAR},
+      </if>
+      <if test="icon != null">
+        icon = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="permissions != null">
+        permissions = #{permissions,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null">
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="net.cnki.app.pojo.SysMenu">
+    update sys_menu
+    set u_type = #{uType,jdbcType=VARCHAR},
+      m_type = #{mType,jdbcType=VARCHAR},
+      text = #{text,jdbcType=VARCHAR},
+      code = #{code,jdbcType=VARCHAR},
+      parent_code = #{parentCode,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      permissions = #{permissions,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      description = #{description,jdbcType=VARCHAR},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <!--分页-->
+  <select id="selectByFilter" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sys_menu
+    where 1=1
+    <if test="menu.text != null and menu.text != ''">
+        and text like concat('%',#{menu.text},'%')
+    </if>
+    <if test="menu.state != null and menu.state != ''">
+        and state = #{menu.state}
+    </if>
+    <if test="menu.parentCode != null and menu.parentCode != ''">
+        and parent_code = #{menu.parentCode}
+    </if>
+    order by sort desc
+  </select>
+</mapper>
