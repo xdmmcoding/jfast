@@ -35,7 +35,16 @@ public class DataSourceConfig {
     public DataSourceProperties dataSourceProperties() {
         return new DataSourceProperties();
     }
-
+    /**
+     * 
+     * @Description 数据库加密与解密  
+     * @Author      lixudong  
+     * @Date        2020年7月28日 下午5:02:30  
+     * @param @param dataSourceProperties
+     * @param @return 参数  
+     * @return DataSource 返回类型   
+     * @throws
+     */
     @Primary
     @Bean(name = "dataSource")
     @ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
