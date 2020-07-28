@@ -19,6 +19,15 @@ import com.jfast.util.AESUtil;
 public class DataSourceConfig {
 	private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
 	
+	/**
+	 * 
+     * @Description 设置数据库加密  
+     * @Author      lixudong  
+     * @Date        2020年7月28日 下午4:44:44  
+     * @param @return 参数  
+     * @return DataSourceProperties 返回类型   
+     * @throws
+	 */
     @Primary
     @Bean(name = "dataSourceProperties")
     @ConfigurationProperties(prefix = "spring.datasource")
