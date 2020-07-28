@@ -2,4 +2,6 @@
 .classpath
 .project
 .settings
+.factorypath
 /.settings/
+/.apt_generated/
