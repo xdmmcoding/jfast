@@ -13,9 +13,9 @@ spring:
     encoding: UTF-8
   datasource:
     name: mydb
-    url: jdbc:mysql://192.168.168.107:3306/sdemo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/sdemo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: guogan
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       minimum-idle: 3                         # 指定连接维护的最小空闲连接数
