@@ -1,4 +1,6 @@
-——com.jfast.algorithm shardin ----------------------- 分库分表自定义算法类包
+springboot 快速开发框架，集成http连接池，线程池，shardining，mail，shiro，ehcache，swagger,物理分页,切面日志等
+
+——com.jfast.algorithm ------------------------------- 分库分表自定义算法类包
 
 ——com.jfast.annos ----------------------------------- 自定义注解类包
 
