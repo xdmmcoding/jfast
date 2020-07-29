@@ -12,7 +12,7 @@ import org.springframework.core.convert.converter.Converter;
  * @Description springboot处理controller层日期格式转化  
  * @ClassName   DateConverter  
  * @Date        2019年11月4日 下午4:45:13  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public class DateFormatConverter implements Converter<String, Date> {

@@ -9,14 +9,14 @@ import com.jfast.util.SpringUtils;
  * @Description 发送邮件工具类  
  * @ClassName   MailHelper  
  * @Date        2019年11月1日 下午2:21:13  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public class MailHelper {
 	/**
 	 * 
      * @Description 带格式发送  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年12月19日 上午10:11:44  
      * @param @param to
      * @param @param subject
@@ -31,7 +31,7 @@ public class MailHelper {
 	/**
 	 * 
      * @Description 带附件发送  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年12月19日 上午10:12:07  
      * @param @param to
      * @param @param subject

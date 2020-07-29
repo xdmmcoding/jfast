@@ -23,7 +23,7 @@ public class SysUserComponent {
 	/**
 	 * 
      * @Description 提交  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月23日 下午4:16:17  
      * @param @param sysUser
      * @param @param userVo

@@ -7,7 +7,7 @@ import com.jfast.E;
  * @Description 接口返回格式    
  * @ClassName   ResVo  
  * @Date        2019年4月8日 下午2:26:52  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public class ExportVo<T> extends OptResult{
@@ -21,7 +21,7 @@ public class ExportVo<T> extends OptResult{
 	/**
 	 * 
      * @Description 接口返回格式  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年4月8日 下午2:26:25  
      * @param @param flag
      * @param @param code
@@ -42,7 +42,7 @@ public class ExportVo<T> extends OptResult{
 	/**
 	 * 
      * @Description 成功  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月30日 上午8:53:31  
      * @param @param data
      * @param @return 参数  
@@ -68,7 +68,7 @@ public class ExportVo<T> extends OptResult{
 	/**
 	 * 
      * @Description 失败  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月30日 上午8:53:50  
      * @param @param code
      * @param @param message

@@ -42,7 +42,7 @@ public class UserInformationServiceImpl implements UserInformation {
 	/**
 	 * 
      * @Description 根据手机号查询管理系统的用户  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月11日 下午5:25:10  
      * @param @param phone
      * @param @return 参数  

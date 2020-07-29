@@ -41,7 +41,7 @@ public class WebMvcConfig  implements WebMvcConfigurer{
      * 					1、一个URL可以配置多个Filter，使用逗号分隔
      * 					2、当设置多个过滤器时，全部验证通过，才视为通过
      * 					3、部分过滤器可指定参数，如perms，roles  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月15日 上午10:24:18  
      * @param @param securityManager
      * @param @return 参数  
@@ -100,7 +100,7 @@ public class WebMvcConfig  implements WebMvcConfigurer{
 	/**
 	 * 
      * @Description 凭证匹配器（由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了所以我们需要修改下doGetAuthenticationInfo中的代码;）  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月15日 上午10:23:42  
      * @param @return 参数  
      * @return HashedCredentialsMatcher 返回类型   
@@ -117,7 +117,7 @@ public class WebMvcConfig  implements WebMvcConfigurer{
     /**
      * 
      * @Description 身份认证realm;(账号密码校验；权限等)  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月15日 上午10:23:55  
      * @param @return 参数  
      * @return WebAuthRealm 返回类型   
@@ -190,7 +190,7 @@ public class WebMvcConfig  implements WebMvcConfigurer{
 	/**
 	 * 
      * @Description 解决上传文件控制层接收为null的方法  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月13日 上午11:30:00  
      * @param @return 参数  
      * @return CommonsMultipartResolver 返回类型   
@@ -207,7 +207,7 @@ public class WebMvcConfig  implements WebMvcConfigurer{
     /**
      * 
      * @Description springboot处理controller层日期格式转化    
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月4日 下午4:49:13  
      * @param @return 参数  
      * @return DateFormatConverter 返回类型   

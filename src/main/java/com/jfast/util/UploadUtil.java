@@ -27,7 +27,7 @@ public class UploadUtil {
     /**
      * 
      * @Description 上传文件  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月7日 上午9:17:34  
      * @param @param filePath
      * @param @param filename
@@ -114,7 +114,7 @@ public class UploadUtil {
     /**
      * 
      * @Description 上传到本地文件夹  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月7日 上午9:41:42  
      * @param @param file
      * @param @param filePath
@@ -182,7 +182,7 @@ public class UploadUtil {
    	/**
    	 * 
      * @Description InputStream 转 byte  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月7日 上午9:48:51  
      * @param @param inputStream
      * @param @return
@@ -211,7 +211,7 @@ public class UploadUtil {
    	/**
    	 * 
      * @Description 将源文件名，修改为UUID生成的文件名  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月13日 下午1:50:50  
      * @param @param originalName
      * @param @return
@@ -228,7 +228,7 @@ public class UploadUtil {
    	/**
    	 * 
      * @Description byte转string 
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月21日 上午8:57:44  
      * @param @param bytes
      * @param @return

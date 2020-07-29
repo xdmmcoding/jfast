@@ -18,7 +18,7 @@ public class ClientResourceContoller {
 	/**
 	 * 
      * @Description 判断下载权限  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月29日 下午3:23:13  
      * @param @param request
      * @param @param response

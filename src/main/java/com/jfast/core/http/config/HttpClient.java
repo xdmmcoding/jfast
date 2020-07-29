@@ -33,7 +33,7 @@ public class HttpClient {
     /**
      * 
      * @Description 首先实例化一个连接池管理器，设置最大连接数、并发连接数  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月26日 下午2:25:52  
      * @param @return 参数  
      * @return PoolingHttpClientConnectionManager 返回类型   
@@ -52,7 +52,7 @@ public class HttpClient {
     /**
      * 
      * @Description 实例化连接池，设置连接池管理器。这里需要以参数形式注入上面实例化的连接池管理器  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月26日 下午2:26:02  
      * @param @param httpClientConnectionManager
      * @param @return 参数  
@@ -73,7 +73,7 @@ public class HttpClient {
     /**
      * 
      * @Description 注入连接池，用于获取httpClient  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月26日 下午2:26:20  
      * @param @param httpClientBuilder
      * @param @return 参数  
@@ -91,7 +91,7 @@ public class HttpClient {
      * 通过RequestConfig的custom方法来获取到一个Builder对象
      * 设置builder的连接信息
      * 这里还可以设置proxy，cookieSpec等属性。有需要的话可以在此设置  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月26日 下午2:26:34  
      * @param @return 参数  
      * @return RequestConfig.Builder 返回类型   
@@ -108,7 +108,7 @@ public class HttpClient {
     /**
      * 
      * @Description 使用builder构建一个RequestConfig对象  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月26日 下午2:26:55  
      * @param @param builder
      * @param @return 参数  

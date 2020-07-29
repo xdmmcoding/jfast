@@ -51,7 +51,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 人员设置页面  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月16日 上午9:28:46  
      * @param @param request
      * @param @param response
@@ -67,7 +67,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 分页信息  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月17日 下午3:05:59  
      * @param @param request
      * @param @param response
@@ -88,7 +88,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 提交  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月29日 下午5:07:21  
      * @param @param request
      * @param @param response
@@ -108,7 +108,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 是否启用  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午9:05:33  
      * @param @param request
      * @param @param response
@@ -134,7 +134,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 删除  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午9:18:24  
      * @param @param request
      * @param @param response
@@ -156,7 +156,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 设置角色  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 下午4:54:45  
      * @param @param request
      * @param @param response
@@ -185,7 +185,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 角色下拉菜单  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 下午4:47:26  
      * @param @param request
      * @param @param response
@@ -214,7 +214,7 @@ public class PersonnelController{
 	/**
 	 * 
      * @Description 过滤其他不必要的信息
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月17日 上午10:15:33  
      * @param @param mList
      * @param @return 参数  

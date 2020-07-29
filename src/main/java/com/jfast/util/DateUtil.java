@@ -578,7 +578,7 @@ public class DateUtil {
     /**
      * 
      * @Description 13位的时间戳转date  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年12月12日 下午3:18:48  
      * @param @param time
      * @param @return 参数  
@@ -592,7 +592,7 @@ public class DateUtil {
     /**
      * 
      * @Description 10位的时间戳转date  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年12月12日 下午3:19:55  
      * @param @param time
      * @param @return 参数  

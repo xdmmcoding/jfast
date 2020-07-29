@@ -13,7 +13,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
  * @Description aliJSON的通用API  
  * @ClassName   JsonUtils  
  * @Date        2018年11月28日 下午3:03:38  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2018.
  */
 public class JSONUtils {

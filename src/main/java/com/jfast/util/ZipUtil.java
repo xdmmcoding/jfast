@@ -14,7 +14,7 @@ public class ZipUtil {
 	/**
 	 * 
      * @Description 解压zip文件
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月26日 上午10:11:40  
      * @param @param srcFile
      * @param @param destDirPath
@@ -120,7 +120,7 @@ public class ZipUtil {
 	/**
 	 * 
      * @Description  删除文件  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月26日 上午11:06:52  
      * @param @param file
      * @param @return 参数  

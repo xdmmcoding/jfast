@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @Description Dao接口  
  * @ClassName   IBaseService  
  * @Date        2019年7月23日 下午4:17:01  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public interface IBaseService<M, E, K> extends Serializable {
@@ -35,7 +35,7 @@ public interface IBaseService<M, E, K> extends Serializable {
     /**
      * 
      * @Description 更新实体。不判断传入值是否为NULL  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月25日 下午3:33:07  
      * @param @param entity
      * @param @return 参数  

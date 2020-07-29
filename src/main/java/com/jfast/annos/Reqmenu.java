@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * @Description 菜单请求日志  
  * @ClassName   RequestLog  
  * @Date        2019年9月3日 下午5:21:48  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 @Target({ElementType.TYPE, ElementType.METHOD})
@@ -23,7 +23,7 @@ public @interface Reqmenu {
 	/**
 	 * 
      * @Description 菜单操作信息  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年8月29日 下午3:30:34  
      * @param @return 参数  
      * @return String[] 返回类型   

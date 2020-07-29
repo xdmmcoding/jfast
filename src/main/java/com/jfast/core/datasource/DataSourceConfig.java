@@ -22,7 +22,7 @@ public class DataSourceConfig {
 	/**
 	 * 
      * @Description 设置数据库加密  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月28日 下午4:44:44  
      * @param @return 参数  
      * @return DataSourceProperties 返回类型   
@@ -38,7 +38,7 @@ public class DataSourceConfig {
     /**
      * 
      * @Description 数据库加密与解密  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月28日 下午5:02:30  
      * @param @param dataSourceProperties
      * @param @return 参数  

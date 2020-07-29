@@ -45,7 +45,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 角色设置页面  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月16日 上午9:28:46  
      * @param @param request
      * @param @param response
@@ -61,7 +61,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 分页信息  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月17日 下午3:05:59  
      * @param @param request
      * @param @param response
@@ -82,7 +82,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 提交  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月29日 下午5:07:21  
      * @param @param request
      * @param @param response
@@ -102,7 +102,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 是否启用  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午9:05:33  
      * @param @param request
      * @param @param response
@@ -128,7 +128,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 删除  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午9:18:24  
      * @param @param request
      * @param @param response
@@ -151,7 +151,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 权限菜单列表  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午9:52:44  
      * @param @param request
      * @param @param response
@@ -194,7 +194,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 配置权限菜单  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午10:51:50  
      * @param @param request
      * @param @param response
@@ -219,7 +219,7 @@ public class RoleController{
 	/**
 	 * 
      * @Description 判断是否选中  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 下午2:09:42  
      * @param @param sList
      * @param @param code

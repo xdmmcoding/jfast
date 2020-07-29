@@ -29,7 +29,7 @@ public class DictionaryController{
 	/**
 	 * 
      * @Description 查询数字字典  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月21日 上午11:43:50  
      * @param @param request
      * @param @param response
