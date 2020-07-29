@@ -21,6 +21,7 @@
 ————com.jfast.core.http ----------------------------- http连接池类包
 
 ————com.jfast.core.mail ----------------------------- 邮件类包
+
 ————com.jfast.core.paging --------------------------- 分页类包
 
 ————com.jfast.core.shardingsphere-------------------- 分库分表配置类包
