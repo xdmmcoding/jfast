@@ -43,7 +43,7 @@ public class TaskPoolConfig {
 	/**
 	 * 
      * @Description 配置kafka线程池  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年9月5日 上午11:25:54  
      * @param @return 参数  
      * @return Executor 返回类型   

@@ -4,7 +4,7 @@ package com.jfast.core.exception;
  * @Description 系统自定义异常  
  * @ClassName   KException  
  * @Date        2019年7月24日 上午8:32:51  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public class KException extends RuntimeException {

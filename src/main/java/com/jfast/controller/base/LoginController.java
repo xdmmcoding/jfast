@@ -82,7 +82,7 @@ public class LoginController{
 	/**
 	 * 
      * @Description 注册  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 上午11:13:45  
      * @param @param request
      * @param @param response
@@ -99,7 +99,7 @@ public class LoginController{
 	/**
 	 * 
      * @Description 重置密码  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 上午10:50:43  
      * @param @param request
      * @param @param response
@@ -116,7 +116,7 @@ public class LoginController{
 	/**
      * 
      * @Description 登出  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月10日 上午9:37:42  
      * @param @param request
      * @param @param response
@@ -136,7 +136,7 @@ public class LoginController{
     /**
      * 
      * @Description 插入登录日志  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月5日 上午11:37:30  
      * @param @param request
      * @param @param sysUser 参数  

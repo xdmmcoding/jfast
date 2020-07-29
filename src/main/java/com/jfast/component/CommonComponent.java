@@ -50,7 +50,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 根据手机号查询管理系统的用户  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月11日 下午5:25:10  
      * @param @param phone
      * @param @return 参数  
@@ -67,7 +67,7 @@ public class CommonComponent {
 	/**
 	 * 
 	 * @Description 根据用户名查询管理系统的用户  
-	 * @Author      lixudong  
+	 * @Author      xd  
 	 * @Date        2019年10月11日 下午5:25:10  
 	 * @param @param phone
 	 * @param @return 参数  
@@ -85,7 +85,7 @@ public class CommonComponent {
 	/***
 	 * 
      * @Description 根据用户类型查询菜单  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月12日 下午2:27:34  
      * @param @param type
      * @param @return 参数  
@@ -101,7 +101,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 验证手机验证码  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月29日 上午8:49:04  
      * @param @param phone
      * @param @param vcode
@@ -116,7 +116,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 查询超级管理员  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月18日 下午4:04:51  
      * @param @return 参数  
      * @return String 返回类型   
@@ -132,7 +132,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 查询用户权限菜单 
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月23日 下午4:02:58  
      * @param @return
      * @param @throws Exception 参数  
@@ -157,7 +157,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 过滤菜单权限  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 上午10:26:37  
      * @param @param mList
      * @param @param user
@@ -208,7 +208,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 获取用户权限  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年6月4日 下午3:20:51  
      * @param @param user
      * @param @return 参数  
@@ -266,7 +266,7 @@ public class CommonComponent {
 	/**
 	 * 
      * @Description 查询字典名称  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年6月10日 下午2:42:07  
      * @param @param type
      * @param @return 参数  

@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * @Description 鉴权认证  
  * @ClassName   Authorization  
  * @Date        2019年3月6日 下午5:13:10  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 @Target({ElementType.TYPE, ElementType.METHOD})

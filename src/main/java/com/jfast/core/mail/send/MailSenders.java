@@ -24,7 +24,7 @@ public class MailSenders {
 	/**
 	 * 
      * @Description 发送邮件  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 下午2:17:13  
      * @param @param to
      * @param @param subject
@@ -43,7 +43,7 @@ public class MailSenders {
 	/**
 	 * 
      * @Description 发送邮件html  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月5日 下午4:10:53  
      * @param @param to
      * @param @param subject
@@ -64,7 +64,7 @@ public class MailSenders {
 	/**
 	 * 
      * @Description 带附件的发送  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月26日 上午9:16:23  
      * @param @param to
      * @param @param subject

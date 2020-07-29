@@ -39,7 +39,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 查询学科名是否重复  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月23日 上午10:03:35  
      * @param @param subjectName
      * @param @return 参数  
@@ -57,7 +57,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 保存角色信息  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午8:59:46  
      * @param @param sysRole
      * @param @param user
@@ -90,7 +90,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 配置菜单权限  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午10:50:33  
      * @param @param roleId
      * @param @param codes
@@ -128,7 +128,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 获取全部管理的菜单  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午11:02:02  
      * @param @param type
      * @param @return 参数  
@@ -142,7 +142,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 匹配权限  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年6月4日 下午3:13:18  
      * @param @param code
      * @param @param cList
@@ -163,7 +163,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 递归找树儿子  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 上午11:15:09  
      * @param @param cmap
      * @param @param cList
@@ -190,7 +190,7 @@ public class SysRoleComponent {
 	/**
 	 * 
      * @Description 获取菜单权限数据  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年10月30日 下午2:05:44  
      * @param @param roleId
      * @param @return 参数  

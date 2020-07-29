@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @Description 错误页面处理  
  * @ClassName   WebErrorPageResolver  
  * @Date        2019年11月6日 上午10:14:55  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 @Component

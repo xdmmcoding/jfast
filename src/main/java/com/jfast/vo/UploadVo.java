@@ -5,7 +5,7 @@ package com.jfast.vo;
  * @Description 资源上传返回类  
  * @ClassName   UploadVo  
  * @Date        2019年8月12日 上午11:43:05  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public class UploadVo{

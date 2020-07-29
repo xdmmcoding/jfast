@@ -29,7 +29,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 进入首页  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月29日 下午3:59:40  
      * @param @param request
      * @param @param response
@@ -47,7 +47,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 进入首页  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月29日 下午3:59:40  
      * @param @param request
      * @param @param response
@@ -72,7 +72,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 直接进入登陆页面  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月29日 下午3:59:52  
      * @param @param request
      * @param @param response
@@ -92,7 +92,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 注册  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 上午10:50:36  
      * @param @param request
      * @param @param response
@@ -107,7 +107,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 重置密码  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月1日 上午10:50:43  
      * @param @param request
      * @param @param response
@@ -122,7 +122,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 错误页面  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月5日 下午4:38:43  
      * @param @param request
      * @param @param response
@@ -149,7 +149,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 获取自己的权限菜单  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年6月4日 下午2:12:03  
      * @param @param request
      * @param @param response
@@ -182,7 +182,7 @@ public class PageController{
 	/**
 	 * 
      * @Description 过滤其他不必要的信息
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年7月17日 上午10:15:33  
      * @param @param mList
      * @param @return 参数  

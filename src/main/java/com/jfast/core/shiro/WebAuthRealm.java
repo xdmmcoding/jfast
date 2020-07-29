@@ -26,7 +26,7 @@ import com.jfast.vo.UserVo;
  * @Description 身份验证核心类  
  * @ClassName   WebAuthRealm  
  * @Date        2020年5月15日 下午1:50:43  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2020.
  */
 public class WebAuthRealm extends AuthorizingRealm {

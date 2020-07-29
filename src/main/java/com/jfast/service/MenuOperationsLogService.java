@@ -10,7 +10,7 @@ public interface MenuOperationsLogService extends IBaseService<MenuOperationsLog
 	/**
 	 * 
      * @Description 插入菜单日志  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年11月6日 下午2:40:51  
      * @param @param user
      * @param @param message 参数  

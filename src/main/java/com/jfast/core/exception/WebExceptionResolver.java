@@ -22,7 +22,7 @@ import com.jfast.vo.ExportVo;
  *      		3、@ControllerAdvice(basePackages={"com.aaa","com.bbb"})：扫描指定package下的Controller  
  * @ClassName   WebExceptionResolver  
  * @Date        2018年12月26日 下午5:09:57  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2018.
  */
 @ControllerAdvice
@@ -32,7 +32,7 @@ public class WebExceptionResolver {
     /**
      * 
      * @Description shrio权限不足处理  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2020年5月18日 下午2:03:46  
      * @param @param req
      * @param @param e
@@ -59,7 +59,7 @@ public class WebExceptionResolver {
     /**
      * 
      * @Description 仅可以处理  Controller方法跑出的异常，如：解析参数异常，方法内部出现的异常，无法处理404异常
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年12月27日 上午8:48:33  
      * @param @param e
      * @param @return 参数  

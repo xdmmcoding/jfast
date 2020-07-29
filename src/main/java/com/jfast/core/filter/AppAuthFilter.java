@@ -16,7 +16,7 @@ import com.jfast.vo.ExportVo;
  * @Description 验证App访问权限过滤器
  * @ClassName AuthFilter
  * @Date 2019年8月5日 下午4:55:55
- * @Author lixudong Copyright (c) All Rights Reserved, 2019.
+ * @Author xd Copyright (c) All Rights Reserved, 2019.
  */
 public class AppAuthFilter implements HandlerInterceptor {
 
@@ -26,7 +26,7 @@ public class AppAuthFilter implements HandlerInterceptor {
 
 	/**
 	 * 
-	 * @Description 设置错误信息 @Author lixudong @Date 2018年12月20日
+	 * @Description 设置错误信息 @Author xd @Date 2018年12月20日
 	 *              下午2:06:14 @param @param request @param @param
 	 *              response @param @param msg 参数 @return void 返回类型 @throws
 	 */

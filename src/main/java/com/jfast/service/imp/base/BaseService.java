@@ -15,7 +15,7 @@ import com.jfast.service.base.IBaseService;
  * @Description Dao接口实现  
  * @ClassName   BaseService  
  * @Date        2019年7月23日 下午4:17:17  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2019.
  */
 public abstract class BaseService<M, E, K extends Serializable> implements IBaseService<M, E, K> {

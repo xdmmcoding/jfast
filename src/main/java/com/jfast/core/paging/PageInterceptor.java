@@ -36,7 +36,7 @@ import org.apache.ibatis.session.RowBounds;
  * 老规矩，签名里要拦截的类型只能是接口。  
  * @ClassName   PagePlugin  
  * @Date        2018年11月1日 下午2:38:08  
- * @Author      lixudong  
+ * @Author      xd  
  * Copyright (c) All Rights Reserved, 2018.
  */
 @Intercepts({ @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class, Integer.class })})
@@ -130,7 +130,7 @@ public class PageInterceptor implements Interceptor {
     /**
      * 
      * @Description 解析分页参数  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月1日 下午2:23:03  
      * @param @param obj
      * @param @return 参数  
@@ -157,7 +157,7 @@ public class PageInterceptor implements Interceptor {
     /**
      * 
      * @Description 重置分页参数  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月1日 下午2:37:19  
      * @param @param sql
      * @param @param connection
@@ -197,7 +197,7 @@ public class PageInterceptor implements Interceptor {
     /**
      * 
      * @Description 对(?)参数进行设值  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2018年11月1日 下午2:36:12  
      * @param @param ps
      * @param @param mappedStatement
@@ -216,7 +216,7 @@ public class PageInterceptor implements Interceptor {
 	/**
 	 * 
      * @Description 重写分页sql  
-     * @Author      lixudong  
+     * @Author      xd  
      * @Date        2019年7月24日 上午10:23:00  
      * @param @param dialect
      * @param @param srcSql
