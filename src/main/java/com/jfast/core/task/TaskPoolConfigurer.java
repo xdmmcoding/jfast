@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -16,10 +16,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
 @EnableAsync
 @PropertySource(value = "classpath:global.properties",ignoreResourceNotFound = true)
-@Conditional(ScanTaskCondition.class)// 判断是否开启配置
-public class TaskPoolConfig {
+public class TaskPoolConfigurer {
 	
-    private static final Logger logger = LoggerFactory.getLogger(TaskPoolConfig.class);
+    private static final Logger logger = LoggerFactory.getLogger(TaskPoolConfigurer.class);
 
 	//线程池创建时候初始化的线程数
 	@Value("${task.corePoolSize}")
@@ -50,6 +49,7 @@ public class TaskPoolConfig {
      * @throws
 	 */
 	@Bean("taskExecutor")
+	@ConditionalOnProperty(prefix = "task.active", name = "active", havingValue = "true")// 判断是否开启配置
 	public Executor taskExecutor() {
 		logger.info("===========================[开启线程池配置]================================");
 		ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();		
