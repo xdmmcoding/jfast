@@ -23,9 +23,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @ConditionalOnProperty(prefix = "swagger", name = "active", havingValue = "true")
 @EnableSwagger2
 @EnableSwaggerBootstrapUI
-public class SwaggerConfig implements WebMvcConfigurer{
+public class SwaggerConfigurer implements WebMvcConfigurer{
 	
-	private static final Logger logger = LoggerFactory.getLogger(SwaggerConfig.class);
+	private static final Logger logger = LoggerFactory.getLogger(SwaggerConfigurer.class);
     /**
      * 创建一个Docket对象
      * 调用select()方法，
@@ -47,13 +47,13 @@ public class SwaggerConfig implements WebMvcConfigurer{
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //标题
-                .title("ODATA接口文档")
+                .title("jfast接口文档")
                 //简介
                 .description("")
                 //服务条款
                 .termsOfServiceUrl("")
                 //作者个人信息
-                .contact(new Contact("中国知网","",""))
+                .contact(new Contact("jfast","",""))
                 //版本
                 .version("1.0")
                 .build();
