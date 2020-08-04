@@ -1,5 +1,5 @@
 server:
-  port: 8080 #项目端口
+  port: 8080                              #项目端口
   servlet:
     context-path: /jfast
     jsp:
@@ -18,13 +18,13 @@ spring:
     password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
-      minimum-idle: 3                         # 指定连接维护的最小空闲连接数
-      idle-timeout: 180000                    # 空闲连接存活最大时间，默认600000（10分钟）
-      maximum-pool-size: 20                   # 连接池最大连接数，默认是10
-      auto-commit: true                       # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
-      pool-name: MyHikariCP                   # 连接池名称
-      max-lifetime: 1800000                   # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
-      connection-timeout: 30000               # 数据库连接超时时间,默认30秒，即30000
+      minimum-idle: 3                     # 指定连接维护的最小空闲连接数
+      idle-timeout: 180000                # 空闲连接存活最大时间，默认600000（10分钟）
+      maximum-pool-size: 20               # 连接池最大连接数，默认是10
+      auto-commit: true                   # 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      pool-name: JfastHikariCP            # 连接池名称
+      max-lifetime: 1800000               # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      connection-timeout: 30000           # 数据库连接超时时间,默认30秒，即30000
       connection-test-query: SELECT 1
   mvc:
     view:
@@ -43,18 +43,18 @@ spring:
     enabled: true 
   mail:
     host: smtphz.qiye.163.com
-    port: 25 #ttls 默认端口号25
+    port: 25                              #ttls 默认端口号25
     username: 
-    password:  # 设置密码，该处的密码是QQ邮箱开启SMTP的授权码而非QQ密码
+    password:                             #设置密码，该处的密码是QQ邮箱开启SMTP的授权码  而非QQ密码
     default-encoding: UTF-8
     properties:
       mail:
         smtp:
-          auth: true # 设置是否需要认证，如果为true,那么用户名和密码就必须的，如果设置false，可以不设置用户名和密码，当然也得看你的对接的平台是否支持无密码进行访问的。
+          auth: true                      # 设置是否需要认证，如果为true,那么用户名和密码就必须的，如果设置false，可以不设置用户名和密码，当然也得看你的对接的平台是否支持无密码进行访问的。
           timeout: 5000
           connectiontimeout: 5000  
           starttls:
-            enable: true # ttls 是对纯文本通信协议的扩展。它提供一种方式将纯文本连接升级为加密连接（TLS或SSL），而不是另外使用一个端口作加密通信。
+            enable: true                  # ttls 是对纯文本通信协议的扩展。它提供一种方式将纯文本连接升级为加密连接（TLS或SSL），而不是另外使用一个端口作加密通信。
             required: true
 mybatis:
   mapperLocations: classpath:mapper/*.xml
@@ -63,15 +63,23 @@ mybatis:
 logging:
   config: classpath:logback-spring.xml
 httpClient:
-  maxTotal: 100 #最大连接数
-  defaultMaxPerRoute: 100 #并发数
-  connectTimeout: 1000 #创建连接的最长时间
-  connectionRequestTimeout: 500 #从连接池中获取到连接的最长时间
-  socketTimeout: 10000 #数据传输的最长时间
-  staleConnectionCheckEnabled: true #提交请求前测试连接是否可用 
+  maxTotal: 100                           #最大连接数
+  defaultMaxPerRoute: 100                 #并发数
+  connectTimeout: 1000                    #创建连接的最长时间
+  connectionRequestTimeout: 500           #从连接池中获取到连接的最长时间
+  socketTimeout: 10000                    #数据传输的最长时间                    
+  staleConnectionCheckEnabled: true       #提交请求前测试连接是否可用 
 swagger:
   active: false
   basic:
     enable: true
     username: admin
     password: jfast
+threadpool:                               #线程池配置
+  active: true                            
+  corePoolSize: 10                        #线程池创建时候初始化的线程数
+  maxPoolSize: 20                         #线程池最大的线程数，只有在缓冲队列满了之后才会申请超过核心线程数的线程
+  queueCapacity: 200                      #用来缓冲执行任务的队列
+  keepAliveSeconds: 60                    #当超过了核心线程出之外的线程在空闲时间到达之后会被销毁
+  waitForTasksToCompleteOnShutdown: true  #用来设置线程池关闭的时候等待所有任务都完成再继续销毁其他的Bean，这样这些异步任务的销毁就会先于Redis线程池的销毁。同时，这里还设置了setAwaitTerminationSeconds
+  awaitTerminationSeconds: 60             #该方法用来设置线程池中任务的等待时间，如果超过这个时候还没有销毁就强制销毁，以确保应用最后能够被关闭，而不是阻塞住

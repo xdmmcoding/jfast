@@ -38,7 +38,7 @@ public class MenuOperationsLogServiceImpl extends BaseService<MenuOperationsLog,
      * @return void 返回类型   
      * @throws
 	 */
-	@Async("taskExecutor")
+	@Async("threadpoolExecutor")
 	@Transactional
 	public void insertLog(UserVo user,String message){
 		MenuOperationsLog log = new MenuOperationsLog();
