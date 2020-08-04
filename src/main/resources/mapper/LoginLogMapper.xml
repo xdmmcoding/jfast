@@ -207,4 +207,15 @@
       time = #{time,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <!--分页-->
+  <select id="selectByFilter" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from login_log
+    where 1=1
+    <if test="log.uid != null and log.uid != ''">
+        and uid = #{log.uid}
+    </if>
+    order by time desc
+  </select>
 </mapper>

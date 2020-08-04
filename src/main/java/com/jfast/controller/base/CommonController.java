@@ -16,16 +16,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jfast.component.CommonComponent;
+import com.jfast.core.paging.PageBean;
+import com.jfast.pojo.LoginLog;
 import com.jfast.pojo.SysMenu;
+import com.jfast.service.LoginLogService;
 import com.jfast.vo.ExportVo;
 import com.jfast.vo.UserVo;
 
 @Controller
-public class PageController{
+public class CommonController{
 	
-	private static final Logger logger = LoggerFactory.getLogger(PageController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommonController.class);
 	@Autowired
 	private CommonComponent commonComponent;
+	@Autowired
+	private LoginLogService loginLogService;
 	/**
 	 * 
      * @Description 进入首页  
@@ -163,7 +168,24 @@ public class PageController{
     public ExportVo<Object> getPermissionMenu(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		return ExportVo.success(filterInfo(commonComponent.getpermissionmenu()));
     }
-	
+	/**
+	 * 
+     * @Description 登陆日志  
+     * @Author      xd  
+     * @Date        2020年8月4日 上午9:58:49  
+     * @param @param request
+     * @param @param response
+     * @param @return
+     * @param @throws Exception 参数  
+     * @return ExportVo<Object> 返回类型   
+     * @throws
+	 */
+	@RequestMapping(value = "/loginlog",method=RequestMethod.POST)
+    @ResponseBody
+	public ExportVo<Object> getLoginLog(HttpServletRequest request,HttpServletResponse response) throws Exception {
+		PageBean<LoginLog> pageList = loginLogService.getLoginLogListByPage(new LoginLog(), 1, 2);
+		return ExportVo.success(pageList.getItems());
+    }
 	@RequestMapping(value = "/refresh",method=RequestMethod.GET)
 	@ResponseBody
 	public void clearCache() {
