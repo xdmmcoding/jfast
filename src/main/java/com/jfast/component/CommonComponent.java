@@ -168,7 +168,7 @@ public class CommonComponent {
 	private List<SysMenu> permissionsfilter(List<SysMenu> mList,UserVo user){
 		List<SysMenu> cList = new ArrayList<SysMenu>();
 		Map<String,String> map = new HashMap<String,String>();
-		SysUser suser = getSysUserByPhone(user.getPhone());
+		SysUser suser = sysUserService.getById(user.getId());
 		//超级管理员
 		if(ICONST.USER_TYPE_1.equals(suser.getType())){
 			return mList;
@@ -220,7 +220,7 @@ public class CommonComponent {
 		List<SysMenu> mList = getMenuList();
 		Set<String> permissions = new HashSet<>();
 		Map<String,String> map = new HashMap<String,String>();
-		SysUser suser = getSysUserByPhone(user.getPhone());
+		SysUser suser = sysUserService.getById(user.getId());
 		//超级管理员
 		if(ICONST.USER_TYPE_1.equals(suser.getType())){
 			if(mList != null && !mList.isEmpty()){

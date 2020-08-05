@@ -21,10 +21,7 @@
                         
                         <div class="layui-col-sm12 layui-col-md12">
                             <div class="layui-col-sm12 layui-col-md6">
-                                <div class="layui-col-sm12 layui-col-md12 mar-t-20" >
-                                <fieldset class="layui-elem-field layui-field-title" style="margin-top: -15px;width: 70%;">
-									<legend style="font-size: 16px;">登陆日志</legend>
-								</fieldset>
+                                <div class="layui-col-sm12 layui-col-md12 mar-t-20" >                              
                                 	<div id="log_content_text"></div>        
                                 </div>                              
                             </div>
@@ -208,10 +205,12 @@
         common.ajax('post','${ctx}/loginlog',{},function(res){
 	    	if(res.success){
    				var getTplEx = log_content.innerHTML;
-   				if(res.data != null){
+   				$('#log_content_text').html('');
+   				if(res.data != null && res.data.length>0){
    					for(var i=0;i<res.data.length;i++){
    						res.data[i].time = common.formatDatetimebox(res.data[i].time);
-   					}	
+   					}
+   					$('#log_content_text').append('<fieldset class="layui-elem-field layui-field-title" style="margin-top: -15px;width: 70%;"><legend style="font-size: 16px;">登陆日志</legend></fieldset>');
    				}
 	   			laytpl(getTplEx).render(res.data, function (html) {
 	   	        	$('#log_content_text').append(html);
