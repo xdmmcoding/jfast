@@ -93,11 +93,10 @@ public class HttpClientUtil {
 				httpGet.addHeader(key, headers.get(key));
 			}
 		}
-     // 发起请求
+        // 发起请求
         if(this.httpClient==null)
         	System.out.println("httpclient is null");
         CloseableHttpResponse response = this.httpClient.execute(httpGet);
-        //this.httpClient.close(); 
         // 判断状态码是否为200
         return EntityUtils.toString(response.getEntity(), "UTF-8");
        

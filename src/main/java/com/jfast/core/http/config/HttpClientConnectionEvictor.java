@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class HttpClientConnectionEvictor extends Thread {
  
-@Autowired
-private HttpClientConnectionManager connMgr;
- 
-private volatile boolean shutdown;
+	@Autowired
+	private HttpClientConnectionManager connMgr;
+	 
+	private volatile boolean shutdown;
  
 	public HttpClientConnectionEvictor() {
 		super();
@@ -35,7 +35,7 @@ private volatile boolean shutdown;
 	public void shutdown() {
 		shutdown = true;
 		synchronized (this) {
-		notifyAll();
+			notifyAll();
 		}
 	}
 	
