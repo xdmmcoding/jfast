@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Primary;
 import com.jfast.util.AESUtil;
 
 @Configuration
+@ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
 public class DataSourceConfig {
 	private static final Logger logger = LoggerFactory.getLogger(DataSourceConfig.class);
 	
@@ -31,7 +32,6 @@ public class DataSourceConfig {
     @Primary
     @Bean(name = "dataSourceProperties")
     @ConfigurationProperties(prefix = "spring.datasource")
-    @ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
     public DataSourceProperties dataSourceProperties() {
         return new DataSourceProperties();
     }
@@ -47,7 +47,6 @@ public class DataSourceConfig {
      */
     @Primary
     @Bean(name = "dataSource")
-    @ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
     public DataSource dataSource(@Qualifier("dataSourceProperties") DataSourceProperties dataSourceProperties) {
 		String pwd = AESUtil.decryptBase64(dataSourceProperties.getPassword(), AESUtil.PASSWORD);
 		if(StringUtils.isNotEmpty(pwd)){
