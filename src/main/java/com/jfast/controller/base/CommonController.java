@@ -184,7 +184,7 @@ public class CommonController{
     @ResponseBody
 	public ExportVo<Object> getLoginLog(HttpServletRequest request,HttpServletResponse response) throws Exception {
 		PageBean<LoginLog> pageList = loginLogService.getLoginLogListByPage(new LoginLog(), 1, 2);
-		return ExportVo.success(pageList.getItems());
+		return ExportVo.success(pageList.getData());
     }
 	@RequestMapping(value = "/refresh",method=RequestMethod.GET)
 	@ResponseBody

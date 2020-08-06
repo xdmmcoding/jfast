@@ -27,7 +27,6 @@ import com.jfast.pojo.SysRole;
 import com.jfast.pojo.SysRoleMenu;
 import com.jfast.service.SysRoleService;
 import com.jfast.vo.ExportVo;
-import com.jfast.vo.GridVo;
 import com.jfast.vo.RoleVo;
 import com.jfast.vo.UserVo;
 
@@ -75,9 +74,8 @@ public class RoleController{
 	@RequestMapping(value = "/pagination.html",method=RequestMethod.POST)
 	@Reqmenu(message="管理体系-角色列表页面列表信息查询")
 	@ResponseBody
-	public GridVo pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysRole sysRole) {
-		PageBean<RoleVo> pageList = sysRoleService.getSysRoleListByPage(sysRole, page, limit);
-		return new GridVo(pageList.getTotal(),pageList.getItems());
+	public PageBean<RoleVo> pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysRole sysRole) {
+		return sysRoleService.getSysRoleListByPage(sysRole, page, limit);
 	}
 	/**
 	 * 

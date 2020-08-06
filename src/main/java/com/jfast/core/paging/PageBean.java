@@ -7,10 +7,14 @@ public class PageBean<T> {
 	private int limit;
 	/**当前页*/
 	private int page;
-	/**总条数*/
-	private int total;
-	/**每页的详细数据*/
-	private List<T> items;
+	//解析接口状态
+	private Integer code = 0; //解析接口状态
+	//解析提示文本
+	private String msg;
+	//解析数据长度
+	private Integer count; 
+	//
+	private List<T> data;
 	public int getLimit() {
 		return limit;
 	}
@@ -23,17 +27,28 @@ public class PageBean<T> {
 	public void setPage(int page) {
 		this.page = page;
 	}
-	public int getTotal() {
-		return total;
+	public Integer getCode() {
+		return code;
 	}
-	public void setTotal(int total) {
-		this.total = total;
+	public void setCode(Integer code) {
+		this.code = code;
 	}
-	public List<T> getItems() {
-		return items;
+	public String getMsg() {
+		return msg;
 	}
-	public void setItem(List<T> items) {
-		this.items = items;
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
-	
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		this.count = count;
+	}
+	public List<T> getData() {
+		return data;
+	}
+	public void setData(List<T> data) {
+		this.data = data;
+	}
 }

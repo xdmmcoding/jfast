@@ -10,11 +10,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @Configuration
+@ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
 public class JdbcTemplateDataSourceConfig {
 
     @Primary
     @Bean(name = "jdbcTemplate")
-    @ConditionalOnProperty(prefix = "spring.datasource.", name = "pwd-en-active", havingValue = "true", matchIfMissing = false)
     public JdbcTemplate jdbcTemplate(@Qualifier("dataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }

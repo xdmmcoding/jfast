@@ -27,9 +27,11 @@ public class PageUtil {
 	 */
 	public static <T> PageBean<T> getPage(List<T> list, PageParam pageParam) {
 		PageBean<T> pv = new PageBean<T>();
-		pv.setItem(list);
-		pv.setTotal(pageParam.getTotal());
-		pv.setPage(pageParam.getPage());
+		pv.setData(list);
+		if(pageParam != null){			
+			pv.setCount(pageParam.getTotal());
+			pv.setPage(pageParam.getPage());
+		}
 		return pv;
 	}
 	
