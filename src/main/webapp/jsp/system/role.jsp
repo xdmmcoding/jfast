@@ -46,7 +46,7 @@
 	                    <div style="clear:both"></div>
 	                    <fieldset class="layui-elem-field layui-field-title-zd">
 							<legend style="">
-								<button type="button" class="layui-btn layui-btn-sm layui-btn-black" id="add">
+								<button type="button" class="layui-btn layui-btn-sm layui-btn-blue" id="add">
 									<i class="layui-icon">&#xe654;</i>增加角色
 								</button>
 							</legend>

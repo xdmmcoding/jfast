@@ -22,10 +22,10 @@ import com.jfast.ICONST;
 import com.jfast.annos.Reqmenu;
 import com.jfast.component.CommonComponent;
 import com.jfast.core.paging.PageBean;
+import com.jfast.core.paging.PageUtil;
 import com.jfast.pojo.SysMenu;
 import com.jfast.service.SysMenuService;
 import com.jfast.vo.ExportVo;
-import com.jfast.vo.GridVo;
 
 @Controller
 @RequestMapping("/menu")
@@ -55,7 +55,7 @@ public class MenuController{
 	
 	@RequestMapping(value = "/get/all.html",method=RequestMethod.POST)
 	@ResponseBody
-	public GridVo getmeunlist(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysMenu sysMenu) {
+	public PageBean<SysMenu> getmeunlist(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysMenu sysMenu) {
 		List<SysMenu> list = sysMenuService.getResult(null);
 		Map<String, String> umap = commonComponent.getDictByType(ICONST.SYS_MENU_U_TYPE);
 		Map<String, String> mmap = commonComponent.getDictByType(ICONST.SYS_MENU_M_TYPE);
@@ -65,7 +65,7 @@ public class MenuController{
 				if(StringUtils.isNotEmpty(m.getuType()))m.setuTypeName(umap.get(m.getuType()));
 			}
 		}
-		return new GridVo(list.size(),list);
+		return PageUtil.getPage(list, null);
 	}
 	/**
 	 * 
@@ -83,9 +83,8 @@ public class MenuController{
 	 */
 	@RequestMapping(value = "/pagination.html",method=RequestMethod.POST)
 	@ResponseBody
-	public GridVo pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysMenu sysMenu) {
-		PageBean<SysMenu> pageList = sysMenuService.getSysMenuListByPage(sysMenu, page, limit);
-		return new GridVo(pageList.getTotal(),pageList.getItems());
+	public PageBean<SysMenu> pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysMenu sysMenu) {
+		return sysMenuService.getSysMenuListByPage(sysMenu, page, limit);
 	}
 	/**
 	 * 

@@ -21,7 +21,7 @@
                     	<div class="h-title">菜单列表</div>
 	                    <fieldset class="layui-elem-field layui-field-title-zd" style="margin-top: 10px;">
 								<legend style="">
-									<button type="button" class="layui-btn layui-btn-sm layui-btn-black" id="add">
+									<button type="button" class="layui-btn layui-btn-sm layui-btn-blue" id="add">
 										<i class="layui-icon">&#xe654;</i>增加菜单
 									</button>
 								</legend>

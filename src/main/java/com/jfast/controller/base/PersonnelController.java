@@ -30,7 +30,6 @@ import com.jfast.service.SysRoleService;
 import com.jfast.service.SysRoleUserService;
 import com.jfast.service.SysUserService;
 import com.jfast.vo.ExportVo;
-import com.jfast.vo.GridVo;
 import com.jfast.vo.SysUserVo;
 import com.jfast.vo.UserVo;
 
@@ -81,9 +80,10 @@ public class PersonnelController{
 	@RequestMapping(value = "/pagination.html",method=RequestMethod.POST)
 	@Reqmenu(message="管理体系-人员列表页面列表信息查询")
 	@ResponseBody
-	public GridVo pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysUserVo sysUser) {
+	public PageBean<SysUserVo> pagination(HttpServletRequest request,HttpServletResponse response,@RequestParam(defaultValue = "1") Integer page,@RequestParam(defaultValue = "10") Integer limit,SysUserVo sysUser) {
 		PageBean<SysUserVo> pageList = sysUserService.getSysUserListByPage(sysUser, page, limit);
-		return new GridVo(pageList.getTotal(),filterInfo(pageList.getItems()));
+		filterInfo(pageList.getData());
+		return pageList;
 	}
 	/**
 	 * 
