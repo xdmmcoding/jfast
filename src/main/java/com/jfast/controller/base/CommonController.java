@@ -20,6 +20,7 @@ import com.jfast.core.paging.PageBean;
 import com.jfast.pojo.LoginLog;
 import com.jfast.pojo.SysMenu;
 import com.jfast.service.LoginLogService;
+import com.jfast.util.RSAEncrypt;
 import com.jfast.vo.ExportVo;
 import com.jfast.vo.UserVo;
 
@@ -91,8 +92,9 @@ public class CommonController{
 		//获取登录信息
 		Object value = SecurityUtils.getSubject().getPrincipal();;
 		//如果session不为空，则可以浏览其他页面
-  		if (value == null) return "login";
-  		return "index";
+  		if (value != null) return "index";
+  		request.setAttribute("key", RSAEncrypt.PUBLIC_KEY);
+  		return "login";
 	}
 	/**
 	 * 
