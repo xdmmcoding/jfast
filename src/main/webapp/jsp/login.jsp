@@ -101,6 +101,7 @@
         	var encrypt = new JSEncrypt();
           	encrypt.setPublicKey(data.field.key);
           	data.field.password = encrypt.encrypt(data.field.password);
+          	data.field.key = '';
             //表单数据formData
             common.ajax('post','${ctx}/login/login.html',data.field,function(res){
             	if(res.success){

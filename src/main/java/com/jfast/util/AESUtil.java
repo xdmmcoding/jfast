@@ -310,9 +310,9 @@ public class AESUtil{
 
 
     public static void main(String[] args) {
-    	 String testb64 = encryptBase64("guogan", PASSWORD);
-         System.out.println(testb64);
-         
-         System.out.println(decryptBase64(testb64, PASSWORD));
+    	String testb64 = encryptBase64("guogan", PASSWORD);
+		System.out.println(testb64);
+ 
+		System.out.println(decryptBase64(testb64, PASSWORD));
     }
 }
