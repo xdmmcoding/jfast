@@ -26,6 +26,7 @@ import com.jfast.pojo.LoginLog;
 import com.jfast.pojo.SysUser;
 import com.jfast.service.LoginLogService;
 import com.jfast.util.Common;
+import com.jfast.util.RSAEncrypt;
 import com.jfast.vo.ExportVo;
 import com.jfast.vo.LoginVo;
 import com.jfast.vo.UserVo;
@@ -49,6 +50,9 @@ public class LoginController{
         		subject.getSession().setAttribute("verifitype",loginVo.getType());
         		password = loginVo.getVerfiy();
         	}
+        	//密码解密
+        	//password = AESUtil.decryptBase64(password, AESUtil.PASSWORD);
+        	password = RSAEncrypt.decrypt(password, RSAEncrypt.PRIVATE_KEY);
         	UsernamePasswordToken userToken = new UsernamePasswordToken(loginVo.getUsername(),password);
             subject.login(userToken);
             if(subject.isAuthenticated()){          	
