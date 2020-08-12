@@ -18,9 +18,9 @@
     	<!-- <img src="" alt="" style="width: 150px;display:block;margin:10px auto"> -->
         <p class="system-title">${pro_name}</p>
         <form class="layui-form login-form" >
-            <p class="login-title">
-                <span class="active">账号登录</span>
-                <span>短信登录</span>
+            <p class="login-title">账号登录
+                <!-- <span class="active">账号登录</span>
+                <span>短信登录</span> -->
             </p>
             <div class="layui-form-item">
                 <input type="text" name="username" id="username" required value="" lay-verify="required" placeholder="请输入手机号" lay-reqtext="请输入手机号"
@@ -46,11 +46,12 @@
                         style="color:#1395fa;">立即注册</a></span>
             </div> --%>
             <input type="hidden" id="type" name="type" value="2">
-            
+            <input type="hidden" id="key" name="key" value="${key}">
         </form>
     </div>
 </body>
 <%@ include file="footer.jsp"%>
+<script src="${ctx}/static/js/jsencrypt.min.js"></script>
 <script>
     layui.use(['form', 'jquery','common'], function () {
         var $ = layui.jquery, form = layui.form , common = layui.common;
@@ -93,6 +94,13 @@
                      return false;
                  }
         	}
+        	//加密-AES
+        	//var key = CryptoJS.enc.Utf8.parse(data.field.key);
+        	//data.field.password = CryptoJS.AES.encrypt(data.field.password,key,{mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.Pkcs7}).toString();
+        	//加密-RSA
+        	var encrypt = new JSEncrypt();
+          	encrypt.setPublicKey(data.field.key);
+          	data.field.password = encrypt.encrypt(data.field.password);
             //表单数据formData
             common.ajax('post','${ctx}/login/login.html',data.field,function(res){
             	if(res.success){
