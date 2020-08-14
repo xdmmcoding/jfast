@@ -57,15 +57,15 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label" >菜单地址</label>
+                    <label class="layui-form-label" >菜单图标</label>
                     <div class="layui-input-block">
-                        <input type="text" name="url" value=""  maxlength="50" placeholder="请输入菜单地址"  autocomplete="off" class="layui-input">
+                        <input type="text" id="icon" name="icon" value="" maxlength="50" lay-filter="icon" placeholder="请输入菜单图标"  autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label" >菜单图标</label>
+                    <label class="layui-form-label" >菜单地址</label>
                     <div class="layui-input-block">
-                        <input type="text" name="icon" value=""  maxlength="50" placeholder="请输入菜单图标"  autocomplete="off" class="layui-input">
+                        <input type="text" name="url" value=""  maxlength="50" placeholder="请输入菜单地址"  autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -112,8 +112,8 @@
 </body>
 <%@ include file="../footer.jsp"%>
 <script>
-    layui.use(['jquery', 'table', 'form', 'layer','common','treeTable'], function (obj) {
-        var $ = layui.jquery, table = layui.table, layer = layui.layer, form = layui.form, common = layui.common,treetable = layui.treeTable;   	
+    layui.use(['jquery', 'table', 'form', 'layer','common','treeTable','iconHhysFa'], function (obj) {
+        var $ = layui.jquery, table = layui.table, layer = layui.layer, form = layui.form, common = layui.common,treetable = layui.treeTable,iconHhysFa = layui.iconHhysFa;   	
      	treetable.render({
             elem: '#datagrid',
             id:'datagrid',
@@ -201,6 +201,30 @@
 		    	}
 		    })
 		}
+		//
+        iconHhysFa.render({
+            // 选择器，推荐使用input
+            elem: '#icon',
+            // 数据类型：fontClass/awesome，推荐使用fontClass
+            type: 'ali-svg',
+            // 是否开启搜索：true/false，默认true
+            search: false,
+            // 是否开启分页：true/false，默认true
+            page: true,
+            // 每页显示数量，默认12
+            limit: 12,
+            closeIcon:true,
+            // fa 图标接口
+            url: '${ctx}/static/assets/micon/iconfont.json',
+            // 点击回调
+            click: function(data) {
+                console.log(data);
+            },
+            // 渲染成功后的回调
+            success: function(d) {
+                console.log(d);
+            }
+        });
 		var aeIndex;
         // 弹层和表单验证
         function aeFormLayer(title,type,data) {
@@ -222,7 +246,9 @@
                 		$("input[name='id']").val(data.id);
                 		$("select[name='uType']").val(data.uType);
                 		$("select[name='mType']").val(data.mType);
+                		$("input[name='sort']").val(data.sort);
                 		form.render('select');
+                		iconHhysFa.checkIconAli('icon',data.icon);
                 	}else{
                 		$("input[name='text']").val('');
                 		$("input[name='code']").val('');
@@ -233,7 +259,9 @@
                 		$("input[name='id']").val('');
                 		$("select[name='uType']").val(data.uType);
                 		$("select[name='mType']").val(data.mType);
+                		$("input[name='sort']").val('');
                 		form.render('select');
+                		iconHhysFa.checkIconAli('icon','');
                 	}
                 },
                 yes: function () {

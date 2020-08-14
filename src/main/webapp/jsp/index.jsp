@@ -26,12 +26,12 @@
                     <a href="" id="refresh"><i class="layui-icon layui-icon-refresh-3" ></i></a>  
                 </li> -->
                 <li class="layui-nav-item">
-                    <a href="javascript:;">${user.username}</a>
+                    <a href="javascript:;" style="font-size: 16px;">${user.username}</a>
                 </li>
                 <li class="layui-nav-item">
                     <a href="" id="out">
                     	<svg class="layui-icon-ali" aria-hidden="true">
-							<use xlink:href="#layui-icon-ali-tuichu"></use>
+							<use xlink:href="#layui-icon-ali-tuichu1"></use>
 						</svg>
 					</a>  
                 </li>

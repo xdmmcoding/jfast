@@ -174,11 +174,13 @@
 .layui-layer-title {
     background-color: #f2f2f2!important;
 }
-.layui-icon-ali {
-       width: 1.5em; height: 1.5em;
-       vertical-align: -0.5em;
-       fill: currentColor;
-       overflow: hidden;
+.layui-icon-ali {   
+    width: 1.75em;
+    height: 1.75em;
+    vertical-align: -0.5em;
+    fill: currentColor;
+    overflow: hidden;
+    margin-right: 15px;
 }
 .layui-field-title-zd {
 	text-align:right;
@@ -186,11 +188,19 @@
     border-width: 1px 0 0;
 }
 .layui-elem-field legend {
-   	padding: 5px 0 0 10px;
+	padding: 0 0 0 10px;
 }
 
 .layui-btn-black {
     background-color: #000810;
     background-repeat: repeat-y;
     background-image: -webkit-linear-gradient(left,#aab0bb,#000810);
+}
+.layui-icon-ali-ic {
+    width: 1.3em;
+    height: 1.3em;
+    vertical-align: -0.25em;
+    fill: currentColor;
+    overflow: hidden;
+    margin-left: -7px;
 }

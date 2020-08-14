@@ -15,12 +15,18 @@ layui.define(['element', 'layer','common','element'], function (exports) {
 						url = webRoot+m[t].url;
 					}
 					var a = $jquery('<a></a>').attr('href',url);
-					var i = $jquery('<img ></img>').addClass('layui-icon')
+					/*var i = $jquery('<img ></img>').addClass('layui-icon')
 					var icon = m[t].icon;
 					if(icon!=undefined && icon!=null && icon!=""){
 						i.attr('src',webRoot + icon);
 					}
-					a.append(i);
+					a.append(i);*/
+					var icon = m[t].icon;
+					if(icon!=undefined && icon!=null && icon!=""){
+						a.append('<svg class="layui-icon-ali-ic" aria-hidden="true"><use xlink:href="#'+icon+'"></use></svg>&nbsp;&nbsp;');
+					}else{				
+						a.append('<svg class="layui-icon-ali-ic" aria-hidden="true"><use xlink:href=""></use></svg>&nbsp;&nbsp;');
+					}
 					a.append('<em>'+m[t].text+'</em>');
 					li.append(a);
 					//判断是否有儿子节点
@@ -31,7 +37,12 @@ layui.define(['element', 'layer','common','element'], function (exports) {
 							if(curl!=undefined && curl!=null && curl!=""){
 								curl = webRoot + m[t].children[j].url;
 							}
-							dl.append('<dd><a href="'+curl+'">'+m[t].children[j].text+'</a></dd>');
+							var iicon = m[t].children[j].icon;
+							if(iicon!=undefined && iicon!=null && iicon!=""){
+								dl.append('<dd><a href="'+curl+'"><svg class="layui-icon-ali-ic" aria-hidden="true"><use xlink:href="#'+iicon+'"></use></svg>&nbsp;&nbsp;'+m[t].children[j].text+'</a></dd>');
+							}else{				
+								dl.append('<dd><a href="'+curl+'">'+m[t].children[j].text+'</a></dd>');
+							}
 						}
 						li.append(dl);
 					}

@@ -1,6 +1,7 @@
 <%@ page language="java"  pageEncoding="utf-8"%>
 <script src="${ctx}/static/assets/layui.js" ></script>
 <script src="${ctx}/static/assets/font/ali/iconfont.js" ></script>
+<script src="${ctx}/static/assets/micon/iconfont.js" ></script>
 <script type="text/javascript" >
 	//js中使用项目根路径
 	var webRoot = '${ctx}';
@@ -11,6 +12,7 @@
 		common:'common',
 		eleTree:'eleTree',
 		treeTable:'treeTable',
+		iconHhysFa:'iconHhysFa',
 		home:'{/}'+'${ctx}/static/js/home'
 	})
 	//数字美元表示法
