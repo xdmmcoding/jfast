@@ -6,3 +6,4 @@
 /.settings/
 /.apt_generated/
 .springBeans
+/.apt_generated_tests/
