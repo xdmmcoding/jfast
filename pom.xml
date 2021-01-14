@@ -23,7 +23,7 @@
 		<skipTests>true</skipTests>
 		<!--mybatis-->
 		<mybatis-spring-boot-starter.version>2.1.2</mybatis-spring-boot-starter.version>
-		<poi.version>3.11</poi.version>
+		<poi.version>3.17</poi.version>
 		<poi-ooxml.version>3.11</poi-ooxml.version>
 		<dom4j.version>1.6.1</dom4j.version>
 		<!--fastjson-->
