@@ -43,7 +43,7 @@
 		<swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
 		<!--shiro-->
 		<shiro-web.version>1.5.3</shiro-web.version>
-		<shiro-spring.version>1.5.3</shiro-spring.version>
+		<shiro-spring.version>1.7.1</shiro-spring.version>
 		<shiro-ehcache.version>1.5.3</shiro-ehcache.version>	
 		<!--shardingsphere-->
 		<sharding-jdbc-spring-boot-starter.version>4.0.0</sharding-jdbc-spring-boot-starter.version>
