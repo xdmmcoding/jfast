@@ -35,7 +35,7 @@
 		<!--jwt-->
 		<java-jwt.version>3.3.0</java-jwt.version>
 		<!--ftp-->
-		<commons-net.version>3.3</commons-net.version>
+		<commons-net.version>3.9.0</commons-net.version>
 		<!--主要是富文本编辑器会用到-->
 		<json.version>20160810</json.version>
 		<!--swagger-->
